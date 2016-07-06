@@ -94,7 +94,7 @@
     if (boardType == keyboardTypeDot) {
         [self.keyboardTitle setObject:@"." atIndexedSubscript:9];
     } else if (boardType == keyboardTypeSpace) {
-        [self.keyboardTitle setObject:@" " atIndexedSubscript:9];
+        [self.keyboardTitle setObject:@"Space" atIndexedSubscript:9];
     } else if (boardType == keyboardTypeShotline) {
         [self.keyboardTitle setObject:@"-" atIndexedSubscript:9];
     } else if (boardType == keyboardTypeIDCard) {
@@ -116,11 +116,9 @@
             [currentString deleteCharactersInRange:NSMakeRange(currentString.length - 1, 1)];
             firstResponder.text = currentString;
         }
-//    }else if ([title isEqualToString:@"."]) {
-//        if ([currentString rangeOfString:@"."].location == NSNotFound) {
-//            [currentString appendString:title];
-//            firstResponder.text = currentString;
-//        }
+    }else if ([title isEqualToString:@"Space"]) {
+        [currentString appendString:@" "];
+        firstResponder.text = currentString;
     } else {
         [currentString appendString:title];
         firstResponder.text = currentString;

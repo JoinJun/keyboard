@@ -32,7 +32,7 @@
     teView.frame = CGRectMake(10, 170, 300, 200);
     teView.backgroundColor = [UIColor greenColor];
     [self.view addSubview:teView];
-    keyView2.boardType = keyboardTypeDot;
+    keyView2.boardType = keyboardTypeSpace;
     teView.inputView = keyView2;
     keyView2.frame = CGRectMake(0, 0, 280, 400);
 }
